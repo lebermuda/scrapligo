@@ -6,6 +6,10 @@ import (
 	"github.com/scrapli/scrapligo/util"
 )
 
+func (d *Driver) GetCapabilities() []string {
+	return d.serverCapabilities
+}
+
 // ServerHasCapability returns true if the server supports capability s, otherwise false.
 func (d *Driver) ServerHasCapability(s string) bool {
 	for _, serverCapability := range d.serverCapabilities {
